@@ -1,0 +1,18 @@
+<div class="game-board container">
+  <div class="categories row">
+    <div class="category col" *ngFor="let category of categories">{{ category }}</div>
+  </div>
+  <div class="questions">
+    <div class="question-row row" *ngFor="let questionRow of questionRows">
+      <ng-container *ngFor="let question of questionRow.questions">
+        <div class="question-value col" 
+          [@flip]="question.showAnswer ? 'back' : 'front'"
+          [@fade]="question.isAnswered ? 'out' : 'in'" 
+          (click)="flipCard(question)">
+          <div *ngIf="!question.showAnswer">{{ questionRow.value }}</div>
+          <div *ngIf="question.showAnswer" style="transform: rotateY(180deg);">{{ question.question }}</div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

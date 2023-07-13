@@ -1,0 +1,78 @@
+[
+    {
+      "value": 100,
+      "questions": [
+        {
+          "question": "What are our four client offerings?",
+          "answer": "Research Programs, Conferences, Consulting, Digital Markets"
+        },
+        {
+          "question": "What are the names of two members of our OC (excluding Gene Hall)?",
+          "answer": "Val Sribar, Claire Herkens, Joe Beck, Alwyn Dawkins, Ken Allard, Akhil Jain, Michael Diliberto, Jules Kaufman, Robin Kranich, Craig Safian, Yvonne Genovese, Scott Hensel"
+        },
+        {
+          "question": "What are two functions that we serve?",
+          "answer": "IT, Service, Legal, Sales, Marketing, Supply Chain, Human Resources, Finance"
+        },
+        {
+          "question": "What are our three strategic objectives?",
+          "answer": "Must-Have Research, Compelling Interactions, Operational Excellence"
+        },
+        {
+          "question": "What does NCVI stand for?",
+          "answer": "Net contract value increase"
+        }
+      ]
+    },
+    {
+      "value": 200,
+      "questions": [
+        {
+          "question": "What are our three research models?",
+          "answer": "Analysis & Evaluation, Peer & Practitioner Research, Quantitative Analytics & Data Science (QUADS)"
+        },
+        {
+          "question": "What are two Advisory activities?",
+          "answer": "Lead Inquiry (Client Calls), Provide Written Responses, Present and Support Events, Support Research and Sales"
+        },
+        {
+          "question": "What is one part of the Compelling Interactions Framework?",
+          "answer": "Reset, Educate, Enable"
+        },
+        {
+          "question": "Who connects clients with Advisors for Inquiry calls?",
+          "answer": "RES"
+        },
+        {
+          "question": "What are two Analysts activities?",
+          "answer": "Conduct Research and Write Content, Lead Inquiry, Present and Support Events, Support Research and Sales"
+        }
+      ]
+    },
+    {
+      "value": 300,
+      "questions": [
+        {
+          "question": "How are analysts aligned?",
+          "answer": "To KI’s/MCPs"
+        },
+        {
+          "question": "What are two A&E Content Types?",
+          "answer": "Impact Appraisal, Best Practices, Cool Vendors, First 100 Days, Hype Cycle, Strategic Roadmap, Magic Quadrant, Critical Capabilities, Market Guide"
+        },
+        {
+          "question": "He was an archaeologist. What is that?",
+          "answer": "Robert"
+        },
+        {
+          "question": "When heading out for a fine meal...make sure to ask The Labs resident wine sommelier about a recommendation?",
+          "answer": "Lianne"
+        },
+        {
+          "question": "He is an avid pickleball player",
+          "answer": "Keith"
+        }
+      ]
+    }
+  ]
+  

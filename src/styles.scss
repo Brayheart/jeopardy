@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
+html, body { height: 100%; }
+body { background: linear-gradient(to bottom, #1f57a1, #1c3b6b);}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
