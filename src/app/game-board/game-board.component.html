@@ -5,13 +5,15 @@
   <div class="questions">
     <div class="question-row row" *ngFor="let questionRow of questionRows">
       <ng-container *ngFor="let question of questionRow.questions">
-        <div class="question-value col" 
-          [@flip]="question.showAnswer ? 'back' : 'front'"
+          <div class="question-value col" 
+          [@flipQuestion]="question.showQuestion && !question.showAnswerText ? 'back' : 'front'"
+          [@flipAnswer]="question.showAnswerText ? 'back' : 'front'"
           [@fade]="question.isAnswered ? 'out' : 'in'" 
           (click)="flipCard(question)">
-          <div *ngIf="!question.showAnswer">{{ questionRow.value }}</div>
-          <div *ngIf="question.showAnswer" style="transform: rotateY(180deg);">{{ question.question }}</div>
-        </div>
+          <div *ngIf="!question.showQuestion">{{ questionRow.value }}</div>
+          <div class="medium-text" *ngIf="question.showQuestion && !question.showAnswerText">{{ question.question }}</div>
+          <div class="small-text" *ngIf="question.showAnswerText">{{ question.answer }}</div>
+        </div>      
       </ng-container>
     </div>
   </div>

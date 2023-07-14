@@ -2,15 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
-
 interface Question {
   question: string;
   answer: string;
-  showAnswer: boolean;
-  showFinalAnswer: boolean;
+  showQuestion: boolean;
+  showAnswerText: boolean;
   isAnswered: boolean;
 }
-
 
 interface QuestionRow {
   value: number;
@@ -22,9 +20,16 @@ interface QuestionRow {
   templateUrl: './game-board.component.html',
   styleUrls: ['./game-board.component.scss'],
   animations: [
-    trigger('flip', [
+    trigger('flipQuestion', [
       state('front', style({ transform: 'rotateY(0)' })),
-      state('back', style({ transform: 'rotateY(180deg)' })),
+      state('back', style({ transform: 'rotateY(180deg) scaleX(-1)' })),
+      transition('front <=> back', [
+        animate('0.5s')
+      ])
+    ]),
+    trigger('flipAnswer', [
+      state('front', style({ transform: 'rotateY(0)' })),
+      state('back', style({ transform: 'rotateY(180deg) scaleX(-1)' })),
       transition('front <=> back', [
         animate('0.5s')
       ])
@@ -67,10 +72,12 @@ export class GameBoardComponent implements OnInit {
   }
 
   flipCard(question: any) {
-    if (question.showAnswer) {
-      question.isAnswered = true;
+    if (!question.showQuestion) {
+      question.showQuestion = true;
+    } else if (!question.showAnswerText) {
+      question.showAnswerText = true;
     } else {
-      question.showAnswer = true;
+      question.isAnswered = true;
     }
   }  
 }
